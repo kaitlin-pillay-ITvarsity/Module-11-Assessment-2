@@ -8,19 +8,23 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<a href="#" class="navbar-brand">FoodieFanatix</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbar">
-					<div class="navbar-nav">
-						<a href="index.html" class="nav-item nav-link">Home</a>
-						<a href="about.html" class="nav-item nav-link">About</a>
-						<a href="contact.html" class="nav-item nav-link">Contact</a>
-					</div>
-				</div>
-			</nav>
+						<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Foodie Fanatix</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 		</header>
 		
 		<main>
@@ -36,6 +40,15 @@
 		
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
-		
+		<script>
+			function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+		</script>
 	</body>
 </html>
